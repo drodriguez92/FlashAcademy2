@@ -1,1 +1,1 @@
-<h1>FlashAcademy<h1>
+<h1>FlashAcademy</h1>
