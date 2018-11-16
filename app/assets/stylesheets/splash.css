@@ -1,0 +1,63 @@
+.background {
+  background-image: url("splash_background.jpg");
+  width: 1500px;
+  height: 866px;
+}
+
+footer {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 5px;
+}
+
+.greeting {
+}
+
+header-link {
+  font-size: 30px;
+}
+
+section {
+  background-color: #29a5dc;
+  opacity: 0.5;
+}
+
+.body {
+  color: white;
+}
+
+.header-link h1 {
+  font-size: 30px;
+}
+
+.body h1 {
+  font-size: 62px;
+  font-family: sans-serif;
+  width: 700px;
+}
+
+.body h2 {
+  font-size: 24px;
+}
+
+.body h3 {
+  font-size: 18px;
+}
+
+div {
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(52,64,82,.5);
+  height: 60px;
+}
+
+.icon {
+  height: 35px;
+  width: 35px;
+}
