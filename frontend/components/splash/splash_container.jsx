@@ -6,9 +6,9 @@ import Search from './search';
 const Splash = () => {
     return (
       <>
-      <div className="background">
+      <section className="background">
         <Header />
-        <body className="body">
+        <span className="body">
           <h1>
             The World's Smartest Flashcards
           </h1>
@@ -20,10 +20,10 @@ const Splash = () => {
           <h3>
             Search for Brainscape Flashcards on thousands of classes:
           </h3>
-        </body>
+        </span>
         <Search />
         <Footer />
-      </div>
+      </section>
       </>
     );
   };

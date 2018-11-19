@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
   openModal: modal => dispatch(openModal(modal))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps);
+export default connect(mapStateToProps, mapDispatchToProps)(Greeting);
