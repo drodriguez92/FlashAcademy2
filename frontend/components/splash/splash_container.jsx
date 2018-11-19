@@ -2,8 +2,6 @@ import React from 'react';
 import Header from './header';
 import Footer from './footer';
 import Search from './search';
-// import { Link } from 'react-router-dom';
-
 
 const Splash = () => {
     return (
@@ -16,7 +14,7 @@ const Splash = () => {
           </h1>
           <h2>
             Learn twice as fast, and remember longer.
-            <br></br>
+            <br />
             Proven by decades of cognitive science.
           </h2>
           <h3>

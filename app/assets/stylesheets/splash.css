@@ -15,6 +15,9 @@ footer {
 .greeting {
 }
 
+.header-link {
+  text-decoration: none;
+}
 header-link {
   font-size: 30px;
 }
@@ -29,7 +32,8 @@ section {
 }
 
 .header-link h1 {
-  font-size: 30px;
+  font-size: 20px;
+  color: white;
 }
 
 .body h1 {
@@ -50,6 +54,23 @@ div {
   font-family: sans-serif;
 }
 
+.search {
+  padding-left: 76px;
+  background: hsla(0,0%,100%,.8);
+  height: 60px;
+  vertical-align: bottom;
+  width: 85vw;
+  padding-right: 9.9px;
+  transition: none;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 138px;
+}
+
+.search > .mag-glass {
+  height: 40px;
+}
 header {
   display: flex;
   flex-direction: row;
@@ -57,7 +78,61 @@ header {
   height: 60px;
 }
 
+.search-button {
+  background-color: #28a5dc;
+  height: 60px;
+  color: white;
+}
+
+.footer-1 {
+  width:500px;
+}
+
+.footer-1 h1 {
+  font-size: 24px;
+  /* flex-direction: row;
+  position: absolute; */
+}
+
+.footer-2 {
+  width: 500px;
+}
+
+.footer-2 h1 {
+  font-size: 24px;
+
+  /* flex-direction: row;
+  position: absolute; */
+}
+
+.footer-3 {
+  width: 500px;
+}
+
+.footer-3 h1 {
+  font-size: 24px;
+  /* flex-direction: row;
+  position: absolute; */
+}
+
 .icon {
   height: 35px;
   width: 35px;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
