@@ -5,7 +5,7 @@ import GreetingContainer from '../greeting/greeting_container';
 const Header = () => {
   return (
     <header>
-      <img src="brain_icon.png" className="icon" alt=""></img>
+      <img src="https://www.brainscape.com/assets/bsc-icon.png" className="icon" alt=""></img>
       <Link to="/" className="header-link">
         <h1 >FLASHACADEMY</h1>
       </Link>
