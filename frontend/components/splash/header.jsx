@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <img src="https://www.brainscape.com/assets/bsc-icon.png" className="icon" alt=""></img>
       <Link to="/" className="header-link">
-        <h1 >FLASHACADEMY</h1>
+        <h1><span className="flash">FLASH</span><span className="academy">ACADEMY</span></h1>
       </Link>
       <GreetingContainer className="greeting" />
     </header>

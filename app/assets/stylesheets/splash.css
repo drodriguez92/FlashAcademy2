@@ -18,8 +18,17 @@ footer {
 .header-link {
   text-decoration: none;
 }
+
 header-link {
   font-size: 30px;
+}
+
+.flash {
+  font-weight: 900;
+}
+
+.academy {
+  font-weight: 100;
 }
 
 section {
