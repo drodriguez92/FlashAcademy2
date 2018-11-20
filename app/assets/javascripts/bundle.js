@@ -643,23 +643,23 @@ __webpack_require__.r(__webpack_exports__);
 var Footer = function Footer() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "footer-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Browse All Flashcards"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "white-right-chevron.png",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Browse All Flashcards ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.brainscape.com/assets/white-right-chevron.png",
     className: "arrow",
     alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Made by publisher and top contributors"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Made by publisher and top contributors"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "footer-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Make Flashcards"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "white-right-chevron.png",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Make Flashcards ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.brainscape.com/assets/white-right-chevron.png",
     className: "arrow",
     alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Create, share, & study on any device for free"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Create, share, & study on any device for free"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "footer-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Just Make Me Smarter"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "white-right-chevron.png",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Just Make Me Smarter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.brainscape.com/assets/white-right-chevron.png",
     className: "arrow",
     alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Study our famous \"Knowledge Rehab\" Flashcards"))));
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Study our famous \"Knowledge Rehab\" Flashcards"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
