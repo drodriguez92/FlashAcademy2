@@ -1,5 +1,5 @@
 .background {
-  background-image: url("splash_background.jpg");
+  background-image: url("https://www.brainscape.com/assets/home/main.jpg");
   width: 1500px;
   height: 866px;
 }
@@ -135,4 +135,5 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: white;
 }
