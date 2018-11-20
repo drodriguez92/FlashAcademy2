@@ -31,6 +31,7 @@ header-link {
   font-weight: 100;
 }
 
+
 section {
   background-color: #29a5dc;
   opacity: 0.5;
@@ -80,8 +81,19 @@ div {
   bottom: 138px;
 }
 
+.search-field[placeholder] {
+    color: red;
+    font-weight: 100;
+    background-color: hsla(0,0%,100%,.8);
+    font-size: 24px;
+}
+
 .search > .mag-glass {
-  height: 40px;
+  padding-top: 13px;
+  height: 34px;
+  color: #28a5dc;
+  position: absolute;
+  left: 24px;
 }
 header {
   display: flex;
@@ -98,11 +110,17 @@ header {
 
 .footer-1 {
   width:500px;
+  height:133px;
 }
 
 .footer-1 h1 {
   font-size: 24px;
   font-weight: 400;
+  background-image: url(https://www.brainscape.com/assets/white-right-chevron.png);
+  background-position: 51%;
+  background-size: 14px;
+  padding-right: 24px;
+  background-repeat: no-repeat;
   /* flex-direction: row;
   position: absolute; */
 }
@@ -110,6 +128,7 @@ header {
 .footer-1 h2 {
   font-size: 14px;
   font-weight: 300;
+
 }
 
 .footer-2 h2 {
@@ -124,25 +143,39 @@ header {
 
 .footer-2 {
   width: 500px;
+  height:133px;
 }
 
 .footer-2 h1 {
   font-size: 24px;
   font-weight: 400;
+  background-image: url(https://www.brainscape.com/assets/white-right-chevron.png);
+  background-position: 40%;
+  background-size: 14px;
+  padding-right: 24px;
+  background-repeat: no-repeat;
+  /* padding-right: 26px; */
   /* flex-direction: row;
   position: absolute; */
 }
 
 .footer-3 {
   width: 500px;
+  height:133px;
 }
 
 .footer-3 h1 {
   font-size: 24px;
   font-weight: 400;
+  background-image: url(https://www.brainscape.com/assets/white-right-chevron.png);
+  background-position: 51%;
+  background-size: 14px;
+  padding-right: 24px;
+  background-repeat: no-repeat;
   /* flex-direction: row;
   position: absolute; */
 }
+
 
 .icon {
   height: 35px;

@@ -643,23 +643,11 @@ __webpack_require__.r(__webpack_exports__);
 var Footer = function Footer() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "footer-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Browse All Flashcards ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://www.brainscape.com/assets/white-right-chevron.png",
-    className: "arrow",
-    alt: ""
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Made by publisher and top contributors"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Browse All Flashcards"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Made by publisher and top contributors"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "footer-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Make Flashcards ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://www.brainscape.com/assets/white-right-chevron.png",
-    className: "arrow",
-    alt: ""
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Create, share, & study on any device for free"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Make Flashcards"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Create, share, & study on any device for free"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "footer-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Just Make Me Smarter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://www.brainscape.com/assets/white-right-chevron.png",
-    className: "arrow",
-    alt: ""
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Study our famous \"Knowledge Rehab\" Flashcards"))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Just Make Me Smarter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Study our famous \"Knowledge Rehab\" Flashcards"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
@@ -731,7 +719,11 @@ var Search = function Search() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     fill: "currentColor",
     d: "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "search-field",
+    placeholder: "e.g. MCAT, pharma, bar exam, Spanish, Series 7"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "search-button"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Search")));
 }; // f002
