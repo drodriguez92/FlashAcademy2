@@ -40,14 +40,17 @@ section {
   font-size: 62px;
   font-family: sans-serif;
   width: 700px;
+  font-weight: 500;
 }
 
 .body h2 {
   font-size: 24px;
+  font-weight: 100;
 }
 
 .body h3 {
   font-size: 18px;
+  font-weight: 100;
 }
 
 div {
@@ -90,8 +93,24 @@ header {
 
 .footer-1 h1 {
   font-size: 24px;
+  font-weight: 400;
   /* flex-direction: row;
   position: absolute; */
+}
+
+.footer-1 h2 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer-2 h2 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer-3 h2 {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .footer-2 {
@@ -100,7 +119,7 @@ header {
 
 .footer-2 h1 {
   font-size: 24px;
-
+  font-weight: 400;
   /* flex-direction: row;
   position: absolute; */
 }
@@ -111,6 +130,7 @@ header {
 
 .footer-3 h1 {
   font-size: 24px;
+  font-weight: 400;
   /* flex-direction: row;
   position: absolute; */
 }
