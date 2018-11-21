@@ -1,7 +1,15 @@
 .background {
-  background-image: url("https://www.brainscape.com/assets/home/main.jpg");
-  width: 1500px;
+  /* background-image: url("https://www.brainscape.com/assets/home/main.jpg"); */
+  width: 1425px;
   height: 866px;
+  border: none;
+  margin: 0;
+  background: linear-gradient(90deg,rgba(0,0,0,.94) 0,rgba(0,0,0,.54) 33%,transparent 50%), url(https://www.brainscape.com/assets/home/main.jpg);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 0 0;
+  min-height: auto;
 }
 
 footer {
@@ -10,35 +18,48 @@ footer {
   flex-direction: row;
   position: absolute;
   bottom: 5px;
+  width: 100%;
 }
 
 .greeting {
+  display: flex;
+  flex-direction: row;
 }
 
 .header-link {
   text-decoration: none;
+  display: flex;
 }
 
-header-link {
-  font-size: 30px;
-}
+
 
 .flash {
   font-weight: 900;
+  font-size: 17px;
 }
 
 .academy {
   font-weight: 100;
+  font-size: 17px;
 }
 
-
-section {
-  background-color: #29a5dc;
-  opacity: 0.5;
+body {
+  margin: 0;
+  font-family: sans-serif;
 }
 
 .body {
   color: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  height: calc(64vh - 60px);
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .header-link h1 {
@@ -49,18 +70,29 @@ section {
 .body h1 {
   font-size: 62px;
   font-family: sans-serif;
-  width: 700px;
-  font-weight: 500;
+  width: 50%;
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+  text-shadow: none;
+  line-height: 120%;
+  box-sizing: border-box;
 }
 
 .body h2 {
   font-size: 24px;
   font-weight: 100;
+  margin: 0;
 }
 
-.body h3 {
+.search-blurb {
   font-size: 18px;
+  font-family: sans-serif;
   font-weight: 100;
+  color: white;
+  position: absolute;
+  bottom: 73px;
+  left: 24px;
 }
 
 div {
@@ -69,55 +101,80 @@ div {
 
 .search {
   padding-left: 76px;
-  background: hsla(0,0%,100%,.8);
+  background-color: hsla(0,0%,100%,.8);
   height: 60px;
   vertical-align: bottom;
-  width: 85vw;
+  width: 100%;
   padding-right: 9.9px;
   transition: none;
   display: flex;
   flex-direction: row;
   position: absolute;
-  bottom: 138px;
+  bottom: 139px;
+  box-sizing: border-box;
+  display: block;
 }
 
-.search-field[placeholder] {
-    color: red;
+.search-field {
+    color: #426d79;
     font-weight: 100;
-    background-color: hsla(0,0%,100%,.8);
     font-size: 24px;
+    background-color: hsla(0,0%,100%,0);
+    width: 88.7%;
+    border: 0;
+    /* background-color: hsla(0,0%,100%,.8); */
+    /* background: rgba(0,0,0,.5) none repeat scroll 0 0; */
 }
 
-.search > .mag-glass {
+.mag-glass {
   padding-top: 13px;
   height: 34px;
   color: #28a5dc;
   position: absolute;
   left: 24px;
 }
-header {
+
+.nav-bar {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background-color: rgba(52,64,82,.5);
   height: 60px;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
 }
 
 .search-button {
   background-color: #28a5dc;
   height: 60px;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
   color: white;
+  font-family: sans-serif;
+  width: 10vw;
+  /* margin-left: 480px; */
 }
 
 .footer-1 {
-  width:500px;
+  width:33%;
   height:133px;
+  background-color: rgba(0,170,216,.7);
+  text-align: center;
+  margin-right: 1px;
+  margin-top: 1px;
 }
 
 .footer-1 h1 {
   font-size: 24px;
   font-weight: 400;
   background-image: url(https://www.brainscape.com/assets/white-right-chevron.png);
-  background-position: 51%;
+  background-position: 76%;
   background-size: 14px;
   padding-right: 24px;
   background-repeat: no-repeat;
@@ -142,15 +199,18 @@ header {
 }
 
 .footer-2 {
-  width: 500px;
+  width: 33%;
   height:133px;
+  background-color: rgba(0,170,216,.7);
+  text-align: center;
+  margin-top: 1px;
 }
 
 .footer-2 h1 {
   font-size: 24px;
   font-weight: 400;
   background-image: url(https://www.brainscape.com/assets/white-right-chevron.png);
-  background-position: 40%;
+  background-position: 70%;
   background-size: 14px;
   padding-right: 24px;
   background-repeat: no-repeat;
@@ -160,15 +220,19 @@ header {
 }
 
 .footer-3 {
-  width: 500px;
+  width: 33%;
   height:133px;
+  background-color: rgba(0,170,216,.7);
+  text-align: center;
+  margin-left: 1px;
+  margin-top: 1px;
 }
 
 .footer-3 h1 {
   font-size: 24px;
   font-weight: 400;
   background-image: url(https://www.brainscape.com/assets/white-right-chevron.png);
-  background-position: 51%;
+  background-position: 76%;
   background-size: 14px;
   padding-right: 24px;
   background-repeat: no-repeat;
@@ -178,8 +242,15 @@ header {
 
 
 .icon {
-  height: 35px;
-  width: 35px;
+  background-image: url(https://www.brainscape.com/assets/bsc-icon.png);
+  background-size: 30px;
+  background-position: left 13px;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+  height: 100%;
+  outline: 0 none;
+  width: 50px;
+  height: 50px;
 }
 
 .modal-background {

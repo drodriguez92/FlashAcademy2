@@ -8,19 +8,15 @@ const Splash = () => {
       <>
       <section className="background">
         <Header />
-        <span className="body">
+        <div className="body">
           <h1>
             The World's Smartest Flashcards
           </h1>
           <h2>
-            Learn twice as fast, and remember longer.
-            <br />
-            Proven by decades of cognitive science.
+            Learn twice as fast, and remember longer.<br></br>Proven by decades of cognitive science.
           </h2>
-          <h3>
-            Search for Brainscape Flashcards on thousands of classes:
-          </h3>
-        </span>
+        </div>
+
         <Search />
         <Footer />
       </section>

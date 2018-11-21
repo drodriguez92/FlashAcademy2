@@ -5,11 +5,15 @@ import GreetingContainer from '../greeting/greeting_container';
 const Header = () => {
   return (
     <header>
-      <img src="https://www.brainscape.com/assets/bsc-icon.png" className="icon" alt=""></img>
-      <Link to="/" className="header-link">
-        <h1><span className="flash">FLASH</span><span className="academy">ACADEMY</span></h1>
-      </Link>
-      <GreetingContainer className="greeting" />
+      <div className="nav-bar">
+        <div className="header-left">
+          <section className="icon" />
+          <Link to="/" className="header-link">
+            <h1><span className="flash">FLASH</span><span className="academy">ACADEMY</span></h1>
+          </Link>
+        </div>
+        <GreetingContainer className="greeting" />
+      </div>
     </header>
   );
 };
