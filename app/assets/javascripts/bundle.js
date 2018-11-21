@@ -86,6 +86,118 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/card_actions.js":
+/*!******************************************!*\
+  !*** ./frontend/actions/card_actions.js ***!
+  \******************************************/
+/*! exports provided: RECEIVE_CARDS, RECEIVE_CARD, receiveCards, receiveCard, fetchCards, fetchCard, createCard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_CARDS", function() { return RECEIVE_CARDS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_CARD", function() { return RECEIVE_CARD; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveCards", function() { return receiveCards; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveCard", function() { return receiveCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCards", function() { return fetchCards; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCard", function() { return fetchCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createCard", function() { return createCard; });
+/* harmony import */ var _util_card_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/card_api_util */ "./frontend/util/card_api_util.js");
+
+var RECEIVE_CARDS = 'RECEIVE_CARDS';
+var RECEIVE_CARD = 'RECEIVE_CARD';
+var receiveCards = function receiveCards(payload) {
+  return {
+    type: RECEIVE_CARDS,
+    payload: payload
+  };
+};
+var receiveCard = function receiveCard(card) {
+  return {
+    type: RECEIVE_CARD,
+    card: card
+  };
+};
+var fetchCards = function fetchCards() {
+  return function (dispatch) {
+    return _util_card_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchCards"]().then(function (payload) {
+      return dispatch(receiveCards(payload));
+    });
+  };
+};
+var fetchCard = function fetchCard(id) {
+  return function (dispatch) {
+    return _util_card_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchCard"](id).then(function (card) {
+      return dispatch(receiveCard(card));
+    });
+  };
+};
+var createCard = function createCard(card) {
+  return function (dispatch) {
+    return _util_card_api_util__WEBPACK_IMPORTED_MODULE_0__["createCard"](card).then(function (response) {
+      return dispatch(receiveCard(response));
+    });
+  };
+};
+
+/***/ }),
+
+/***/ "./frontend/actions/deck_actions.js":
+/*!******************************************!*\
+  !*** ./frontend/actions/deck_actions.js ***!
+  \******************************************/
+/*! exports provided: RECEIVE_DECKS, RECEIVE_DECK, receiveDecks, receiveDeck, fetchDecks, fetchDeck, createDeck */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_DECKS", function() { return RECEIVE_DECKS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_DECK", function() { return RECEIVE_DECK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveDecks", function() { return receiveDecks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveDeck", function() { return receiveDeck; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDecks", function() { return fetchDecks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDeck", function() { return fetchDeck; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDeck", function() { return createDeck; });
+/* harmony import */ var _util_deck_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/deck_api_util */ "./frontend/util/deck_api_util.js");
+
+var RECEIVE_DECKS = 'RECEIVE_DECKS';
+var RECEIVE_DECK = 'RECEIVE_DECK';
+var receiveDecks = function receiveDecks(payload) {
+  return {
+    type: RECEIVE_DECKS,
+    payload: payload
+  };
+};
+var receiveDeck = function receiveDeck(deck) {
+  return {
+    type: RECEIVE_DECK,
+    deck: deck
+  };
+};
+var fetchDecks = function fetchDecks() {
+  return function (dispatch) {
+    return _util_deck_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchDecks"]().then(function (payload) {
+      return dispatch(receiveDecks(payload));
+    });
+  };
+};
+var fetchDeck = function fetchDeck(id) {
+  return function (dispatch) {
+    return _util_deck_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchDeck"](id).then(function (deck) {
+      return dispatch(receiveDeck(deck));
+    });
+  };
+};
+var createDeck = function createDeck(deck) {
+  return function (dispatch) {
+    return _util_deck_api_util__WEBPACK_IMPORTED_MODULE_0__["createDeck"](deck).then(function (response) {
+      return dispatch(receiveDeck(response));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/modal_actions.js":
 /*!*******************************************!*\
   !*** ./frontend/actions/modal_actions.js ***!
@@ -808,6 +920,70 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./frontend/reducers/cards_reducer.js":
+/*!********************************************!*\
+  !*** ./frontend/reducers/cards_reducer.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_card_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/card_actions */ "./frontend/actions/card_actions.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_card_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CARDS"]:
+      return action.payload.cards;
+
+    case _actions_card_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CARD"]:
+      var card = action.card;
+      return Object.assign({}, state, _defineProperty({}, card.id, card));
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
+/***/ "./frontend/reducers/decks_reducer.js":
+/*!********************************************!*\
+  !*** ./frontend/reducers/decks_reducer.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_deck_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/deck_actions */ "./frontend/actions/deck_actions.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_deck_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_DECKS"]:
+      return action.payload.decks;
+
+    case _actions_deck_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_DECK"]:
+      var deck = action.deck;
+      return Object.assign({}, state, _defineProperty({}, deck.id, deck));
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
 /***/ "./frontend/reducers/entities_reducer.js":
 /*!***********************************************!*\
   !*** ./frontend/reducers/entities_reducer.js ***!
@@ -818,11 +994,17 @@ document.addEventListener('DOMContentLoaded', function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
+/* harmony import */ var _cards_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cards_reducer */ "./frontend/reducers/cards_reducer.js");
+/* harmony import */ var _decks_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./decks_reducer */ "./frontend/reducers/decks_reducer.js");
+/* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
+
+
 
 
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  users: users,
+  decks: decks,
+  cards: cards
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -1054,6 +1236,78 @@ var configureStore = function configureStore() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
+
+/***/ }),
+
+/***/ "./frontend/util/card_api_util.js":
+/*!****************************************!*\
+  !*** ./frontend/util/card_api_util.js ***!
+  \****************************************/
+/*! exports provided: fetchCards, fetchCard, createCard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCards", function() { return fetchCards; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCard", function() { return fetchCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createCard", function() { return createCard; });
+var fetchCards = function fetchCards() {
+  return $.ajax({
+    url: '/api/cards',
+    method: 'GET'
+  });
+};
+var fetchCard = function fetchCard(id) {
+  return $.ajax({
+    url: "/api/cards/".concat(id),
+    method: 'GET'
+  });
+};
+var createCard = function createCard(card) {
+  return $.ajax({
+    url: '/api/cards',
+    method: 'POST',
+    data: {
+      card: card
+    }
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/deck_api_util.js":
+/*!****************************************!*\
+  !*** ./frontend/util/deck_api_util.js ***!
+  \****************************************/
+/*! exports provided: fetchDecks, fetchDeck, createDeck */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDecks", function() { return fetchDecks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDeck", function() { return fetchDeck; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDeck", function() { return createDeck; });
+var fetchDecks = function fetchDecks() {
+  return $.ajax({
+    url: '/api/decks',
+    method: 'GET'
+  });
+};
+var fetchDeck = function fetchDeck(id) {
+  return $.ajax({
+    url: "/api/decks/".concat(id),
+    method: 'GET'
+  });
+};
+var createDeck = function createDeck(deck) {
+  return $.ajax({
+    url: '/api/decks',
+    method: 'POST',
+    data: {
+      deck: deck
+    }
+  });
+};
 
 /***/ }),
 
