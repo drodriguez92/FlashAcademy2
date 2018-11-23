@@ -29,6 +29,11 @@
   height: 100px;
 }
 
+.deck-flex {
+  display: flex;
+  flex-direction: row;
+}
+
 .deck-heading {
   background-color: rgba(52,64,82,.9);
 }
@@ -150,10 +155,32 @@ body {
   box-sizing: border-box;
 }
 
+.add-cards {
+  background-color: #5cb85c;
+  color: white;
+  padding: 6px 12px;
+  height: 36px;
+  width: 100%;
+  font-family: Proxima Nova,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  /* display: flex; */
+  text-align: center;
+}
+
 .body h2 {
   font-size: 24px;
   font-weight: 100;
   margin: 0;
+  text-align:left;
+}
+
+.class-icon {
+  padding-left: 50px;
+}
+
+.class {
+  padding-left: 20px;
+  padding-top: 25px;
 }
 
 .search-blurb {
@@ -213,6 +240,25 @@ div {
   height: 60px;
   padding-left: 36px;
   padding-right: 36px;
+}
+
+.header-button {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color: #cde;
+  padding: 6px 12px;
+  height: 36px;
+  width: 100%;
+  font-family: Proxima Nova,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  /* display: flex; */
+  text-align: center;
+  height: 60px;
+}
+
+.login-signup {
+  display: flex;
+  flex-flow: row;
 }
 
 .header-left {

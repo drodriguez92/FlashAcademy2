@@ -5,6 +5,8 @@ import DeckForm from './deck_form';
 import Header from '../splash/header';
 import { fetchDecks } from '../../actions/deck_actions';
 
+
+
 class DeckIndex extends Component {
 
   componentDidMount() {
@@ -38,10 +40,10 @@ class DeckIndex extends Component {
     return (
       <main className="deck-index">
         <section className="deck-heading"><Header /></section>
-        <img src="https://pbs.twimg.com/profile_images/378800000699275845/28983bbc0ac0a12cde1c0dc3fc818b4b_400x400.png" className="class-icon"/><h1 className="class"> App Academy </h1>
+        <a className="deck-flex"><img src="https://pbs.twimg.com/profile_images/378800000699275845/28983bbc0ac0a12cde1c0dc3fc818b4b_400x400.png" className="class-icon"/><h1 className="class"> App Academy </h1></a>
         <div className="index-heading">
           <ul className="deck-list">
-            <h2 className="index-labels"><a className="deck-label"> Decks: </a> <button className="create-deck">Create Deck</button></h2>
+            <h2 className="index-labels"><a className="deck-label"> Decks: </a> <button onClick={() => dispatch(openModal('createDeck'))} className="create-deck">Create Deck</button></h2>
             {decks}
           </ul>
         </div>
@@ -49,7 +51,6 @@ class DeckIndex extends Component {
     );
   }
 }
-
 const mapStateToProps = state => {
   const decks = Object.values(state.entities.decks);
   return {

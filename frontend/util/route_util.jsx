@@ -7,7 +7,7 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => {
     if (loggedIn) {
       return <Redirect to="/decks" />;
     }   else {
-    return <Component {...props} />;
+      return <Component {...props} />;
     }
   }
 
