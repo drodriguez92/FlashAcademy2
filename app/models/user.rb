@@ -20,18 +20,18 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
 
     has_many :decks,
-      foreign_key: :deck_id,
+      foreign_key: :author_id,
       primary_key: :id,
       class_name: :Deck
 
     has_many :cards,
       through: :decks,
-      source: :cards,
+      source: :cards
 
     def self.find_by_credentials(username, password)
       user = User.find_by(username: username)
-      return nil unless user
-      user.is_password?(password) ? user : nil
+      return nil unless user && user.is_password?(password)
+      user
     end
 
     def password=(password)

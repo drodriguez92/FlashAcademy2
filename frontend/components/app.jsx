@@ -8,6 +8,10 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import CardIndex from './card/card_index';
+import CardShow from './card/card_show';
+import DeckIndex from './deck/deck_index';
+import DeckShow from './deck/deck_show';
 import Modal from './modal/modal';
 import SplashContainer from './splash/splash_container';
 import GreetingContainer from './greeting/greeting_container';
@@ -20,9 +24,9 @@ const App = () => (
 
   <div>
   <Modal />
-  <Switch>
-    <Route exact path="/" component={SplashContainer} />
-  </Switch>
+    <AuthRoute exact path="/" component={SplashContainer} />
+    <Route exact path="/decks" component={DeckIndex}/>
+    <Route exact path="/decks/:deckId" component={DeckShow}/>
   </div>
 );
 

@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    return(
+    return( 
       <ul>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
@@ -39,9 +39,7 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to FlashAcademy!
-          <br/>
-          Please {this.props.formType} or {this.props.otherForm}
+          {this.props.formType}
           <div onClick={this.props.closeModal} className="close-x">X</div>
           {this.renderErrors()}
           <div className="login-form">

@@ -12,6 +12,77 @@
   min-height: auto;
 }
 
+.deck-index-item {
+  color: #29a5dc;
+  font-size: 50px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* .deck-index {
+  background-image: url(https://pbs.twimg.com/profile_images/378800000699275845/28983bbc0ac0a12cde1c0dc3fc818b4b_400x400.png);
+  background-repeat: no-repeat;
+} */
+
+.class-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.deck-heading {
+  background-color: rgba(52,64,82,.9);
+}
+
+.mastery {
+  font-size: 28px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+
+.deck-label {
+  font-size: 13px;
+}
+
+.create-deck {
+  font-size: 13px;
+  color: #29a5dc;
+}
+
+.class {
+  margin: 0 0 14px;
+  color: #444;
+  font-size: 36px;
+  font-weight: 800;
+}
+.deck-link {
+  color: #29a5dc;
+  text-decoration: none;
+  font-size: 18px;
+
+}
+
+.deck-item {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ddd;
+}
+
+.index-heading {
+  display: flex;
+  flex-direction: row;
+}
+
+.index-labels {
+  /* width: 100; */
+  border-bottom: 1px solid #ddd;
+}
+
+.card-count {
+  font-size: 12px;
+  color: #999;
+}
+
 footer {
   color: white;
   display: flex;

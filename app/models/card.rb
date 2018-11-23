@@ -21,8 +21,4 @@ class Card < ApplicationRecord
     foreign_key: :deck_id,
     primary_key: :id,
     class_name: :Deck
-
-  has_one :subject,
-    through: :author,
-    source: :name
 end
