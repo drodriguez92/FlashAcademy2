@@ -394,7 +394,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_12__["AuthRoute"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: "/",
+    component: _splash_splash_container__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_12__["AuthRoute"], {
+    exact: true,
+    path: "/",
+    component: _splash_splash_container__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     exact: true,
     path: "/",
     component: _splash_splash_container__WEBPACK_IMPORTED_MODULE_8__["default"]
@@ -763,22 +771,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
 
-var mapStateToProps = function mapStateToProps(_ref) {
-  var errors = _ref.errors;
-  return {
-    errors: errors.deck,
-    formType: 'deck'
-  };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    createDeck: function createDeck(deck) {
-      dispatch(Object(_actions_deck_actions__WEBPACK_IMPORTED_MODULE_2__["createDeck"])(deck));
-    }
-  };
-};
-
 var DeckForm =
 /*#__PURE__*/
 function (_Component) {
@@ -791,7 +783,9 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(DeckForm).call(this, props));
     _this.state = {
-      name: '',
+      name: ''
+    };
+    _this.state = {
       objective: ''
     };
     _this.submit = _this.submit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
@@ -814,21 +808,12 @@ function (_Component) {
       this.props.createDeck(Object.assign({}, this.state));
     }
   }, {
-    key: "renderErrors",
-    value: function renderErrors() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.props.errors.map(function (error, i) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          key: "error-".concat(i)
-        }, error, "1");
-      }));
-    }
-  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "deck-form",
         onSubmit: this.submit
-      }, this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "deck-input-label"
       }, "Name:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "deck-input",
@@ -849,7 +834,15 @@ function (_Component) {
   return DeckForm;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-var connecter = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps);
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    createDeck: function createDeck(deck) {
+      dispatch(Object(_actions_deck_actions__WEBPACK_IMPORTED_MODULE_2__["createDeck"])(deck));
+    }
+  };
+};
+
+var connecter = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, mapDispatchToProps);
 /* harmony default export */ __webpack_exports__["default"] = (connecter(DeckForm));
 
 /***/ }),
@@ -937,10 +930,12 @@ function (_Component) {
         }, "Cards: 0")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "add-cards"
         }, "Add Cards"));
-      }); // let form = "FORM";
-      // if (this.props.loggedIn) {
-      //   form = <DeckForm />;
-      // }
+      });
+      var form = "";
+
+      if (this.props.loggedIn) {
+        form = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_deck_form__WEBPACK_IMPORTED_MODULE_3__["default"], null);
+      }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
         className: "deck-index"
@@ -957,7 +952,7 @@ function (_Component) {
         className: "index-heading"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "deck-list"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      }, form, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "index-labels"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "deck-label"

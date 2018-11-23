@@ -32,10 +32,10 @@ class DeckIndex extends Component {
         </section>
       );
     });
-    // let form = "FORM";
-    // if (this.props.loggedIn) {
-    //   form = <DeckForm />;
-    // }
+    let form = "";
+    if (this.props.loggedIn) {
+      form = <DeckForm />;
+    }
 
     return (
       <main className="deck-index">
@@ -43,6 +43,7 @@ class DeckIndex extends Component {
         <a className="deck-flex"><img src="https://pbs.twimg.com/profile_images/378800000699275845/28983bbc0ac0a12cde1c0dc3fc818b4b_400x400.png" className="class-icon"/><h1 className="class"> App Academy </h1></a>
         <div className="index-heading">
           <ul className="deck-list">
+            {form}
             <h2 className="index-labels"><a className="deck-label"> Decks: </a> <button onClick={() => dispatch(openModal('createDeck'))} className="create-deck">Create Deck</button></h2>
             {decks}
           </ul>
