@@ -23,12 +23,11 @@ class DeckIndex extends Component {
     const decks = this.props.decks.map(deck => {
       return (
         <section className="deck-item">
-          <a className="mastery">0%</a>
           <ul key={deck.id} className="deck-index-item">
-            <li><Link to={`/decks/${deck.id}`} className="deck-link">{deck.name}</Link></li>
+            <li> <a className="mastery">0%</a> <Link to={`/decks/${deck.id}`} className="deck-link">{deck.name}</Link> <button className="add-cards">Add Cards</button></li>
             <li className="card-count">Cards: 0</li>
           </ul>
-          <button className="add-cards">Add Cards</button>
+
         </section>
       );
     });
@@ -44,7 +43,7 @@ class DeckIndex extends Component {
         <div className="index-heading">
           <ul className="deck-list">
             {form}
-            <h2 className="index-labels"><a className="deck-label"> Decks: </a> <button onClick={() => dispatch(openModal('createDeck'))} className="create-deck">Create Deck</button></h2>
+            <h2 className="index-labels"><a className="deck-label"> DECKS: </a></h2>
             {decks}
           </ul>
         </div>

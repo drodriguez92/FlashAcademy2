@@ -24,9 +24,7 @@ const App = () => (
 
   <div>
   <Modal />
-    <Route exact path="/" component={SplashContainer}/>
     <AuthRoute exact path="/" component={SplashContainer}/>
-    <Route exact path="/" component={SplashContainer}/>
     <Route exact path="/decks" component={DeckIndex}/>
     <Route exact path="/decks/:deckId" component={DeckShow}/>
   </div>
